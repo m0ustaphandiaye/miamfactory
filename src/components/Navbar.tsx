@@ -1,11 +1,9 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
-  const isMenuPage = location.pathname === '/menu';
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -25,14 +23,14 @@ export default function Navbar() {
           <img src="/logo.png" alt="Miam's Factory" className="h-14 w-auto object-contain" />
         </Link>
 
-        {!isMenuPage && (
+        <div>
           <div className="hidden md:flex items-center space-x-12 font-medium text-sm tracking-wide">
             <a href="/#about" className="hover:text-accent transition-colors">À Propos</a>
             <Link to="/menu" className="hover:text-accent transition-colors">Menu</Link>
             <a href="/#testimonials" className="hover:text-accent transition-colors">Témoignages</a>
             <a href="/#faq" className="hover:text-accent transition-colors">FAQ</a>
           </div>
-        )}
+        </div>
 
         <a href="https://wa.me/message/DQJB6TT6OVVUE1" target="_blank" rel="noopener noreferrer" className="group relative px-6 py-3 bg-primary text-background rounded-full overflow-hidden font-medium hover:scale-105 transition-transform ease-spring duration-300">
           <span className="relative z-10 group-hover:text-white transition-colors">Commander</span>
