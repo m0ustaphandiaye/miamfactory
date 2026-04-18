@@ -13,7 +13,7 @@ export default function Hero() {
           className="flex flex-col items-start"
         >
           <h1 className="text-5xl md:text-7xl lg:text-[6.0rem] font-display font-medium leading-[1.05] tracking-tighter mb-8 text-primary">
-            Pâtes, <span className="text-accent italic">Poulets et</span> <br />Plaisir...
+            Pâtes, <span className="text-accent italic">Poulets</span> <br />et Plaisir...
           </h1>
           <p className="text-xl text-primary/70 mb-12 leading-relaxed font-medium">
             Chez Miam Factory, on cuisine des plats généreux et savoureux, <br className="hidden md:block" />
